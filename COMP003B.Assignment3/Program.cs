@@ -1,3 +1,10 @@
+/*
+    Author: Riley Benson
+    Course: COMP-003B: ASP.NET Core
+    Faculty: Jonathan Cruz
+    Purpose: To showcase my ability to work with MVC routing, model binding, and validtion in ASP.NET.
+*/
+
 namespace COMP003B.Assignment3
 {
     public class Program
