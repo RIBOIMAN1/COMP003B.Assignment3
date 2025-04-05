@@ -4,28 +4,11 @@
 }
 <h1>Registration Successful</h1>
 <partial name="_EventNav" />
-<div class="card mt-4">
-    <div class="card-header">
-        Registration Details
-    </div>
-    <div class="card-body">
-        <dl class="row">
-            <dt class="col-sm-3">Full Name:</dt>
-            <dd class="col-sm-9">@Model.FullName</dd>
-            <dt class="col-sm-3">Email:</dt>
-            <dd class="col-sm-9">@Model.Email</dd>
-            <dt class="col-sm-3">Event Code:</dt>
-            <dd class="col-sm-9">@Model.EventCode</dd>
-            <dt class="col-sm-3">Tickets:</dt>
-            <dd class="col-sm-9">@Model.Tickets</dd>
-            @if (!string.IsNullOrEmpty(Model.ReferralCode))
-            {
-                <dt class="col-sm-3">Referral Code:</dt>
-                <dd class="col-sm-9">@Model.ReferralCode</dd>
-            }
-        </dl>
-    </div>
-</div>
-<div class="mt-3">
-    <a asp-action="Register" class="btn btn-primary">Register Again</a>
+<div class="mt-4">
+    <p>The email you entered is @Model.Email</p>
+    <p>You have successfully registered for <strong>@Model.EventCode</strong> with <strong>@Model.Tickets</strong> ticket(s).</p>
+    @if (!string.IsNullOrEmpty(Model.ReferralCode))
+    {
+        <p>Referral Code: @Model.ReferralCode</p>
+    }
 </div>
